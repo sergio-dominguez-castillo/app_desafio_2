@@ -9,18 +9,20 @@
     <%= stylesheet_link_tag "application", "data-turbo-track": "reload" %>
     <%= javascript_importmap_tags %>
 
-    <link rel="stylesheet" href="assets/css/main.css" />
-		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+    <%# <link rel="stylesheet" href="assets/css/main.css" /> %>
+    <%# <link rel="stylesheet" href="assets/css/main.css" /> %>
+		<%# <noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript> %>
   </head>
 
   <body>
   <%= yield %>
 
 <!-- Scripts -->
-			<script src="assets/js/jquery.min.js"></script>
-			<script src="assets/js/browser.min.js"></script>
-			<script src="assets/js/breakpoints.min.js"></script>
-			<script src="assets/js/main.js"></script>
-
+      <%= javascript_include_tag "application.js"  %>
+      <%= javascript_include_tag "jquery.min.js"  %>
+      <%= javascript_include_tag "browser.min.js"  %>
+      <%= javascript_include_tag "breakpoints.min.js"  %>
+      <%= javascript_include_tag "main.js"  %>
+    
   </body>
 </html>
